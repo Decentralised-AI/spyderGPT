@@ -1,0 +1,25 @@
+---
+crawler:
+  root: https://www.someplace.com/
+  paths:
+    - "publications.cfm?pub=2"
+    - "page.aspx?pub=2"
+    - "page.aspx?pub=3"
+embeddings:
+  model_name: all-MiniLM-L6-v2
+chroma:
+  settings:
+    persist_directory: db
+    chroma_db_impl: duckdb+parquet
+    anonymized_telemetry: false
+  vectorstore:
+    index: index
+    bin: "*.bin"
+    pickle: "*.pkl"
+  parquet:
+    collections: chroma-collections.parquet
+    embeddings: chroma-embeddings.parquet
+textsplitter:
+  size: 500
+  overlap: 50
+sourcedocuments: c:\tmp\crawler_test
