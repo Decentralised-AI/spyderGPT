@@ -31,3 +31,8 @@
     URLS: One or more URL for the worker to download a file from
     PATH: The path to a supplemental spydergpt.yml file
   ```
+
+## Version 0.2.0
+
+* Dropped the `a` from version for `PEP 440``
+* Modified package namespace to use `.` notation

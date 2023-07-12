@@ -1,10 +1,6 @@
-from spydergpt.enum import OperationsEnum
-from spydergpt.exception import InvalidOperationKeyError
-from spydergpt.processor import (
-    process_from_web,
-    process_from_local,
-    url_direct_download,
-)
+from .enum.operationsenum import OperationsEnum
+from .exception.exceptions import InvalidOperationKeyError
+from .processor import process_from_web, process_from_local, url_direct_download
 
 
 class Operation:

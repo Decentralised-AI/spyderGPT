@@ -12,8 +12,8 @@ from langchain.document_loaders import (
 )
 from munch import Munch, munchify
 
-from spydergpt.wrapper import EmlLoaderWrapper
-from spydergpt.utils import merge
+from .wrapper import EmlLoaderWrapper
+from .utils import merge
 
 
 def _get_config(path: Union[Path, str], filename: str) -> Dict[Any, Any]:

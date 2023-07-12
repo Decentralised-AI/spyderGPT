@@ -3,14 +3,13 @@ from typing import Any
 
 from docopt import docopt
 
-from spydergpt.config import Constants
-from spydergpt.operator import Operation
-from spydergpt.enum import OperationsEnum
-from spydergpt.exception import (
+from .config import Constants
+from .ingestor import ingest
+from .exception.exceptions import (
     InvalidOperationKeyError,
     NoNewDocumentsLoadedError,
 )
-from spydergpt.utils import extract_version
+from .utils import extract_version
 
 __version__ = f"{Path(__file__).parent.name} {extract_version()}"
 # inherited to the docops class to generate the programs arguments
@@ -60,39 +59,6 @@ def validate_args(args):
     except ValueError as e:
         print(e.args[0] + "\n")
         print(__doc__)
-
-
-def ingest(
-    arg: str,
-    **kwargs: str,
-) -> str:
-    """The objective of the ingest function is to take in a settings location
-    and an argument, and return the results of a dictionary mapping.
-
-    Args:
-        settings (str): path to alternate application YAML settings. Optional.
-        arg (str): argument string to extract from dictionary mapping.
-        operations (dict[str, Any]): dictionary of callable operations
-
-    Returns:
-        str: ingesting results
-    """
-    # Check if the argument is valid by checking if it is in the operations
-    # dictionary.
-    op = Operation()
-
-    try:
-        # call and return the corresponding function from the operations
-        # dictionary with the settings location as the argument.
-
-        if callable(op.operations[OperationsEnum(arg)]):
-            return op.perform_operation(OperationsEnum(arg), kwargs)
-        else:
-            raise ValueError(f"Invalid operation: {arg}")
-    except (ValueError, InvalidOperationKeyError) as e:
-        # If an exception is raised during the function call, raise it to
-        # the top of the stack
-        raise e
 
 
 def process_args(args: dict[str, Any]) -> str:

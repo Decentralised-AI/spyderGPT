@@ -1,6 +1,6 @@
 from enum import Enum
 
-from spydergpt.enum import MetaEnum
+from .metaEnum import MetaEnum
 
 
 class OperationsEnum(Enum, metaclass=MetaEnum):

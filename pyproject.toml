@@ -3,8 +3,8 @@ requires = ["flit_core >=3.2,<4"]
 build-backend = "flit_core.buildapi"
 
 [project]
-name = "SpyderGPT"
-version = "0.1.0a"
+name = "spydergpt"
+version = "0.2.0"
 description = "use GPT4All to query documents retrieved from website and local repositories"
 readme = {file = "README.md", content-type = "text/markdown"}
 requires-python = ">=3.10"

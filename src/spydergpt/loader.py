@@ -9,8 +9,8 @@ from langchain.docstore.document import Document
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from tqdm import tqdm
 
-from spydergpt.config import Constants
-from spydergpt.exception import NoNewDocumentsLoadedError
+from .config import Constants
+from .exception.exceptions import NoNewDocumentsLoadedError
 
 
 class DocumentLoader:

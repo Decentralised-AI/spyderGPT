@@ -3,6 +3,7 @@
 !**/data/*.sample
 **/db/**
 
+tests/
 
 
 # Byte-compiled / optimized / DLL files

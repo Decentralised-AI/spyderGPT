@@ -4,9 +4,9 @@ from typing import Any, Dict, List
 from langchain.docstore.document import Document
 from munch import Munch
 
-from spydergpt.loader import DocumentLoader
-from spydergpt.exception import NoNewDocumentsLoadedError
-from spydergpt.worker import WorkerBase
+from ..loader import DocumentLoader
+from ..exception.exceptions import NoNewDocumentsLoadedError
+from .workerbase import WorkerBase
 
 
 class LocalWorker(WorkerBase):

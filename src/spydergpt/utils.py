@@ -84,7 +84,8 @@ def extract_version() -> str:
     pyproject.toml file.
 
     Returns:
-        str: A string containing the version of the installed package or the version found in the pyproject.toml file.
+        str: A string containing the version of the installed package or the
+        version found in the pyproject.toml file.
     """
     with suppress(FileNotFoundError, StopIteration):
         with open(

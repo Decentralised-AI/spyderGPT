@@ -12,9 +12,9 @@ from langchain.docstore.document import Document
 from munch import Munch
 from pandas import DataFrame
 
-from spydergpt.loader import DocumentLoader
-from spydergpt.exception import NoNewDocumentsLoadedError
-from spydergpt.worker import WorkerBase
+from ..loader import DocumentLoader
+from ..exception.exceptions import NoNewDocumentsLoadedError
+from .workerbase import WorkerBase
 
 
 class WebWorker(WorkerBase):

@@ -1,4 +1,6 @@
-from spydergpt.worker import LocalWorker, UrlWorker, WebWorker
+from .worker.localworker import LocalWorker
+from .worker.urlworker import UrlWorker
+from .worker.webworker import WebWorker
 
 
 def process_from_local(kwargs):

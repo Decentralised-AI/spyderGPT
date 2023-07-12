@@ -8,9 +8,9 @@ from langchain.vectorstores import Chroma
 from langchain.vectorstores.base import VectorStore
 from munch import Munch
 
-from spydergpt.config import ChromaSettings
-from spydergpt.exception import NoNewDocumentsLoadedError
-from spydergpt.utils import get_files, get_embeddings
+from ..config import ChromaSettings
+from ..exception.exceptions import NoNewDocumentsLoadedError
+from ..utils import get_files, get_embeddings
 
 
 class WorkerBase(ABC):

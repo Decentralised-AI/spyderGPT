@@ -8,9 +8,9 @@ from munch import Munch
 import requests
 from langchain.docstore.document import Document
 
-from spydergpt.loader import DocumentLoader
-from spydergpt.exception import NoNewDocumentsLoadedError
-from spydergpt.worker import WorkerBase
+from ..loader import DocumentLoader
+from ..exception.exceptions import NoNewDocumentsLoadedError
+from .workerbase import WorkerBase
 
 
 class UrlWorker(WorkerBase):
